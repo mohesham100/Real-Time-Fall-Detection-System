@@ -64,14 +64,14 @@ The system is architected as an automated four-phase deep learning and deploymen
 </div>
 
 ```mermaid
-graph TD
-    A[Public Benchmarks: Stanford40, Human Action, Postures] -->|Roboflow Python SDK| B[14,868 Raw Images & Annotations]
-    B -->|Semantic Harmonization| C[Consolidated 8-Class Taxonomy]
-    C -->|Stratified Sampling 80/10/10| D[Train: 14,214 | Valid: 1,759 | Test: 1,759]
-    D -->|Transfer Learning 50 Epochs| E[Ultralytics YOLO11n Backbone]
-    E -->|Validation Checkpoint| F[best_v2.pt - 5.4MB Optimized Weights]
-    F -->|In-Memory OpenCV Decoding| G[FastAPI Asynchronous Microservice]
-    G -->|Sub-30ms Telemetry Stream| H[Cyberpunk Mission Control Web Dashboard]
+flowchart TD
+    A["Public Benchmarks: Stanford40, Human Action, Postures"] -->|Roboflow Python SDK| B["14,868 Raw Images and Annotations"]
+    B -->|Semantic Harmonization| C["Consolidated 8-Class Taxonomy"]
+    C -->|Stratified Sampling 80/10/10| D["Train: 14,214 / Valid: 1,759 / Test: 1,759"]
+    D -->|Transfer Learning 50 Epochs| E["Ultralytics YOLO11n Backbone"]
+    E -->|Validation Checkpoint| F["best_v2.pt - 5.4MB Optimized Checkpoint"]
+    F -->|In-Memory OpenCV Decoding| G["FastAPI Asynchronous Microservice"]
+    G -->|Sub-30ms Telemetry Stream| H["Cyberpunk Mission Control Web Dashboard"]
 ```
 
 ---
