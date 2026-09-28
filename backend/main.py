@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # 3. Load the YOLO model (Ensure 'best.pt' is in the backend folder)
-model = YOLO('best_v2.pt')
+model = YOLO('C:\\My_Workspace\\NTI\\ComputerVision\\Advanced_Fall_Detection\\Fall_Detection_V3\\backend\\best (1).pt')
 
 # 4. Create the API Endpoint
 @app.post("/detect/")
